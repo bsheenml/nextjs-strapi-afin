@@ -1,9 +1,16 @@
 import fetch from 'isomorphic-unfetch'
+import Card from 'components/Card'
 
-const Home = () => {
+const Home = ({ resources }) => {
+
+  const resource = {}
+
+  console.log(resources)
   return (
     <div className="container">
-      <h1> NextJS GraphCMS Playground</h1>
+      {resources.map(resource => (
+          <Card key={resource.id} resource={resource} />
+      ))}
     </div>
   )
 }
@@ -11,13 +18,13 @@ const Home = () => {
 export async function getServerSideProps() {
   const { API_URL } = process.env
 
-  const res = await fetch(`${API_URL}/resoucres`)
+  const res = await fetch(`${API_URL}/resources`)
 
   const data = await res.json()
 
   return {
     props: {
-      resoucres: data
+      resources: data
     }
   }
 }
