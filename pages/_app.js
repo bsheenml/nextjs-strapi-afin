@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <ThemeProvider theme={theme}>
                 <GlobalStyles/>
-                <Header isDark />
+                <Header/>
                 <Component {...pageProps} />
             </ThemeProvider>
         </>
