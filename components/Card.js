@@ -7,14 +7,9 @@ function Card ({ resource }) {
 
     return (
         <CardStyled>
-            <div className="poster">
-                <img src={API_URL + resource.logo.url} alt=""/>
-            </div>
             <div className="body">
                 <h3>{ resource.name }</h3>
                 <p dangerouslySetInnerHTML={{ __html: resource.description}}/>
-                <br></br>
-                <p dangerouslySetInnerHTML={{ __html: resource.contact}}/>
             </div>
         </CardStyled>
     )
