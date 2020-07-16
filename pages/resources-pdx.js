@@ -2,7 +2,7 @@ import fetch from 'isomorphic-unfetch'
 import Card from 'components/Card'
 import { Flex, Box } from 'reflexbox'
 
-const Home = ({ resources }) => {
+const ResourcesPdx = ({ resources }) => {
 
   const resource = {}
 
@@ -35,4 +35,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default Home
+export default ResourcesPdx

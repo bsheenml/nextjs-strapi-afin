@@ -12,18 +12,18 @@ function Navigation() {
         <NavigationStyled>
             <ul>
                 <li>
+                    <Link href="/resources-pdx">
+                        <a className={router.pathname === '/resources-pdx' ? 'active' : '' }>Resources</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/maps-pdx">
+                        <a className={router.pathname === '/maps-pdx' ? 'active' : '' }>Maps</a>
+                    </Link>
+                </li>
+                <li>
                     <Link href="/about">
                         <a className={router.pathname === '/about' ? 'active' : '' }>About</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/blog">
-                        <a className={router.pathname === '/blog' ? 'active' : '' }>Blog</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/contact">
-                        <a className={router.pathname === '/contact' ? 'active' : '' }>Contact</a>
                     </Link>
                 </li>
             </ul>
