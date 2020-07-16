@@ -5,7 +5,7 @@ import Card from 'components/Card'
 import MapContainer from 'components/MapContainer'
 
 
-const TestData = ({ resources }) => {
+const MapsPdx = ({ resources }) => {
 
     const resource = {}
   
@@ -42,4 +42,4 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default TestData
+export default MapsPdx
